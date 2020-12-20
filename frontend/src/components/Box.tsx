@@ -3,7 +3,11 @@ import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
 import * as THREE from "three";
 
-function Box(props: object) {
+type BoxProps = {
+  position: [number, number, number];
+};
+
+function Box(props: BoxProps) {
   const mesh = useRef<THREE.Mesh>();
 
   const [hovered, setHover] = useState(false);
