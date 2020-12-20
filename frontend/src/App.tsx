@@ -1,11 +1,11 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
 import Box from "./components/Box";
-import App from "./styles/App.scss";
+import styles from "./styles/App.module.scss";
 
 function App() {
   return (
-    <Canvas>
+    <Canvas className={styles.canvas}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />
