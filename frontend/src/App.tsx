@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
-import Box from './components/Box';
+import Box from "./components/Box";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
     </Canvas>
-  )
+  );
 }
 
 export default App;

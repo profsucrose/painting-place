@@ -17,7 +17,7 @@ function Box(props: BoxProps) {
     if (mesh && mesh.current) {
       mesh.current.rotation.x += 0.01;
       mesh.current.rotation.y += 0.01;
-      mesh.current.scale.x
+      mesh.current.scale.x += 0.01;
     }
   });
 
