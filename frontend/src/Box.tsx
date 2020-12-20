@@ -9,6 +9,8 @@ export default function Box(props: object) {
   const [active, setActive] = useState(false);
 
   useFrame(() => {
-    mesh.current?.rotation?.x = mesh.current.rotation.y += 0.01;
+    if (mesh.current)
+        mesh.current.rotation.x += 0.01
+        mesh.current.rotation.x += 0.01
   });
 }
