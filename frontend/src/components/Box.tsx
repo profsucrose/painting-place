@@ -14,7 +14,11 @@ function Box(props: BoxProps) {
   const [active, setActive] = useState(false);
 
   useFrame(() => {
-    if (mesh.current) mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
+    if (mesh && mesh.current) {
+      mesh.current.rotation.x += 0.01;
+      mesh.current.rotation.y += 0.01;
+      mesh.current.scale.x
+    }
   });
 
   return (
@@ -31,15 +35,5 @@ function Box(props: BoxProps) {
     </mesh>
   );
 }
-
-ReactDOM.render(
-  <Canvas>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.2, 0, 0]} />
-  </Canvas>,
-  document.getElementById("root")
-);
 
 export default Box;
